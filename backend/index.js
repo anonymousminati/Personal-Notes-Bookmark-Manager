@@ -1,7 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-require('dotenv').config();
-
+require('dotenv').config({ path: `.env.${process.env.NODE_ENV}` });
 // Import configurations
 const config = require('./config');
 const databaseConfig = require('./config/database');
